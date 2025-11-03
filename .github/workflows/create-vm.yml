@@ -70,12 +70,12 @@ jobs:
           echo "EOF" >> $GITHUB_OUTPUT
 
           # Check the log content for an error string.
-          if echo "$OCI_OUTPUT" | grep -q -e '"ServiceError":' -e '"code":'; then
-            echo "Error found in OCI output. Failing the step."
-            exit 1
-          else
-            echo "Success! No error string found in output."
+          if echo "$OCI_OUTPUT" | grep -q '"lifecycle-state": "PROVISIONING"'; then
+            echo "Success! 'PROVISIONING' state found in output."
             exit 0
+          else
+            echo "Error: Success string not found in OCI output. Failing the step."
+            exit 1
           fi
 
       - name: Send Discord Notification
