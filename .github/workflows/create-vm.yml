@@ -9,8 +9,8 @@ env:
   COMPARTMENT_ID: ${{ secrets.OCI_COMPARTMENT_ID }}
   IMAGE_ID: ${{ secrets.IMAGE_ID }}
   SUBNET_ID: ${{ secrets.OCI_SUBNET_ID }}
-  AD_NAME: ${{ secrets.AD_NAME }}
-  OCI_CLI_REGION: ${{ secrets.OCI_CLI_REGION }}
+  AD_NAME: "qaqb:AP-MUMBAI-1-AD-1"
+  OCI_CLI_REGION: "ap-mumbai-1"
   OCI_CLI_USER: ${{ secrets.OCI_CLI_USER }}
   OCI_CLI_TENANCY: ${{ secrets.OCI_CLI_TENANCY }}
   OCI_CLI_FINGERPRINT: ${{ secrets.OCI_CLI_FINGERPRINT }}
