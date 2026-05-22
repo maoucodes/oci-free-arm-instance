@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
 env:
   COMPARTMENT_ID: ${{ secrets.OCI_COMPARTMENT_ID }}
-  IMAGE_ID: "ocid1.image.oc1.phx.aaaaaaaa5rwv4b75xifsugdtjhlux3jlqy5jemo2lhh37i6mbukbqqmplgdq"
+  IMAGE_ID: ${{ secrets.IMAGE_ID }}
   SUBNET_ID: ${{ secrets.OCI_SUBNET_ID }}
   AD_NAME: ${{ secrets.AD_NAME }}
   OCI_CLI_REGION: ${{ secrets.OCI_CLI_REGION }}
@@ -62,7 +62,6 @@ jobs:
             --ssh-authorized-keys-file "/home/runner/my_ssh_key.pub" \
             --assign-public-ip true \
             --display-name "foreverfly-vm" \
-            --debug \
             --boot-volume-size-in-gbs 200 2>&1 || true)
 
           # Store the log as a GitHub step output
