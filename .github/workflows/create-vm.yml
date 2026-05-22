@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
 env:
   COMPARTMENT_ID: ${{ secrets.OCI_COMPARTMENT_ID }}
-  IMAGE_ID: ${{ secrets.IMAGE_ID }}
+  IMAGE_ID: "ocid1.image.oc1.phx.aaaaaaaazd3uynnsb57b76dp3c4hkdo2fjjgz5jase5y3cmvttjvpgwnwq4q"
   SUBNET_ID: ${{ secrets.OCI_SUBNET_ID }}
   AD_NAME: ${{ secrets.AD_NAME }}
   OCI_CLI_REGION: ${{ secrets.OCI_CLI_REGION }}
