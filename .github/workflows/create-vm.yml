@@ -62,6 +62,7 @@ jobs:
             --ssh-authorized-keys-file "/home/runner/my_ssh_key.pub" \
             --assign-public-ip true \
             --display-name "foreverfly-vm" \
+            --debug \
             --boot-volume-size-in-gbs 200 2>&1 || true)
 
           # Store the log as a GitHub step output
